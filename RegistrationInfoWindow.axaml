@@ -1,0 +1,204 @@
+<Window
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    x:Class="s.RegistrationInfoWindow"
+    Width="560"
+    Height="740"
+    Title="Registration Information"
+    CanResize="False">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+
+        <StackPanel Margin="25"
+                    Spacing="15">
+
+            <!-- =========================
+                 HEADER
+                 ========================= -->
+
+            <TextBlock
+                Text="REGISTRATION INFORMATION"
+                FontSize="24"
+                FontWeight="Bold"
+                HorizontalAlignment="Center"/>
+
+            <TextBlock
+                Text="Your current registration details are shown below."
+                HorizontalAlignment="Center"
+                TextWrapping="Wrap"/>
+
+            <Separator/>
+
+            <!-- =========================
+                 REGISTRATION STATUS
+                 ========================= -->
+
+            <Border
+                BorderBrush="Gray"
+                BorderThickness="1"
+                CornerRadius="6"
+                Padding="15">
+
+                <StackPanel Spacing="8">
+
+                    <TextBlock
+                        Text="Registration Status"
+                        FontSize="18"
+                        FontWeight="Bold"/>
+
+                    <TextBlock
+                        Text="✔ Registration Completed"
+                        FontSize="16"
+                        FontWeight="Bold"/>
+
+                    <TextBlock
+                        Text="Your registration has already been completed for the selected academic period."
+                        TextWrapping="Wrap"/>
+
+                </StackPanel>
+
+            </Border>
+
+            <!-- =========================
+                 ACADEMIC INFORMATION
+                 ========================= -->
+
+            <TextBlock
+                Text="Academic Information"
+                FontSize="18"
+                FontWeight="Bold"/>
+
+            <Border
+                BorderBrush="Gray"
+                BorderThickness="1"
+                CornerRadius="6"
+                Padding="15">
+
+                <StackPanel Spacing="10">
+
+                    <TextBlock
+                        x:Name="StudentText"
+                        FontSize="15"
+                        TextWrapping="Wrap"/>
+
+                    <TextBlock
+                        x:Name="QualText"
+                        FontSize="15"
+                        TextWrapping="Wrap"/>
+
+                    <TextBlock
+                        x:Name="YearText"
+                        FontSize="15"
+                        TextWrapping="Wrap"/>
+
+                    <TextBlock
+                        x:Name="SemText"
+                        FontSize="15"
+                        TextWrapping="Wrap"/>
+
+                    <TextBlock
+                        x:Name="LevelText"
+                        FontSize="15"
+                        TextWrapping="Wrap"/>
+
+                </StackPanel>
+
+            </Border>
+
+            <!-- =========================
+                 REGISTRATION PERIOD
+                 ========================= -->
+
+            <TextBlock
+                Text="Registration Period"
+                FontSize="18"
+                FontWeight="Bold"/>
+
+            <Border
+                BorderBrush="Gray"
+                BorderThickness="1"
+                CornerRadius="6"
+                Padding="15">
+
+                <StackPanel Spacing="10">
+
+                    <TextBlock
+                        x:Name="StartDateText"
+                        FontSize="15"/>
+
+                    <TextBlock
+                        x:Name="EndDateText"
+                        FontSize="15"/>
+
+                </StackPanel>
+
+            </Border>
+
+            <!-- =========================
+                 REGISTERED COURSES
+                 ========================= -->
+
+            <TextBlock
+                Text="Registered Courses"
+                FontSize="18"
+                FontWeight="Bold"/>
+
+            <Border
+                BorderBrush="Gray"
+                BorderThickness="1"
+                CornerRadius="6"
+                Padding="15">
+
+                <TextBlock
+                    x:Name="CoursesText"
+                    FontSize="15"
+                    TextWrapping="Wrap"/>
+
+            </Border>
+
+            <!-- =========================
+                 VIEW REGISTERED COURSES
+                 ========================= -->
+
+            <Button
+                Content="VIEW MY REGISTERED COURSES"
+                Height="45"
+                HorizontalAlignment="Stretch"
+                Background="#0A4D8C"
+                Foreground="White"
+                FontWeight="Bold"
+                Click="ViewRegisteredCourses_Click"/>
+
+            <!-- =========================
+                 COMPLETION MESSAGE
+                 ========================= -->
+
+            <Border
+                BorderBrush="Gray"
+                BorderThickness="1"
+                CornerRadius="6"
+                Padding="15">
+
+                <TextBlock
+                    Text="Registration for this semester has already been completed. You cannot register the same semester again."
+                    TextWrapping="Wrap"
+                    HorizontalAlignment="Center"/>
+
+            </Border>
+
+            <!-- =========================
+                 CLOSE
+                 ========================= -->
+
+            <Button
+                Content="Close"
+                Width="130"
+                Height="40"
+                HorizontalAlignment="Center"
+                Click="Close_Click"/>
+
+        </StackPanel>
+
+    </ScrollViewer>
+
+</Window>

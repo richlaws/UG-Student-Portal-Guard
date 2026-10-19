@@ -1,0 +1,26 @@
+# .NET build output
+bin/
+obj/
+
+# IDE files
+.vs/
+.idea/
+
+# Local database credentials
+.local/
+.env
+.env.*
+
+# Local logs and history
+*.log
+history.txt
+
+# Backup files
+*.backup
+*.bak
+
+# FreeFileSync database
+.sync.ffs_db
+
+# Old ChromeDriver binary
+Chrome/

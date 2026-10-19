@@ -1,0 +1,166 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="s.MainWindow"
+        Title="UG Student Portal Guard"
+        Width="420"
+        Height="620">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+
+        <StackPanel Margin="25"
+                    Spacing="15">
+
+            <!-- ========================= -->
+            <!-- APPLICATION HEADER -->
+            <!-- ========================= -->
+
+            <TextBlock
+                Text="UG Student Portal Guard"
+                FontSize="24"
+                FontWeight="Bold"
+                HorizontalAlignment="Center"/>
+
+            <TextBlock
+                Text="University of Ghana"
+                FontSize="16"
+                FontWeight="SemiBold"
+                HorizontalAlignment="Center"/>
+
+            <TextBlock
+                Text="Secure Course Registration Assistant"
+                HorizontalAlignment="Center"/>
+
+            <TextBlock
+                Text="Please sign in with your student credentials."
+                TextWrapping="Wrap"
+                HorizontalAlignment="Center"
+                Margin="0,0,0,10"/>
+
+            <!-- ========================= -->
+            <!-- STUDENT CREDENTIALS -->
+            <!-- ========================= -->
+
+            <Border BorderBrush="Gray"
+                    BorderThickness="1"
+                    CornerRadius="6"
+                    Padding="12">
+
+                <StackPanel Spacing="10">
+
+                    <TextBlock
+                        Text="Student Credentials"
+                        FontWeight="Bold"
+                        FontSize="16"/>
+
+                    <TextBox
+                        Name="StudentIdInput"
+                        Watermark="Student ID (8 digits)"
+                        MaxLength="8"/>
+
+                    <TextBox
+                        Name="PasswordInput"
+                        Watermark="UG Portal PIN (5 digits)"
+                        PasswordChar="*"
+                        MaxLength="5"/>
+
+                </StackPanel>
+
+            </Border>
+
+            <!-- ========================= -->
+            <!-- REGISTRATION DETAILS -->
+            <!-- ========================= -->
+
+            <Border BorderBrush="Gray"
+                    BorderThickness="1"
+                    CornerRadius="6"
+                    Padding="12">
+
+                <StackPanel Spacing="10">
+
+                    <TextBlock
+                        Text="Registration Details"
+                        FontWeight="Bold"
+                        FontSize="16"/>
+
+                    <TextBlock Text="Semester"/>
+
+                    <ComboBox
+                        Name="SemesterComboBox"
+                        SelectedIndex="1">
+
+                        <ComboBoxItem Content="FIRST SEMESTER"/>
+                        <ComboBoxItem Content="SECOND SEMESTER"/>
+
+                    </ComboBox>
+
+                    <TextBlock Text="Level"/>
+
+                    <ComboBox
+                        Name="LevelComboBox"
+                        SelectedIndex="3">
+
+                        <ComboBoxItem Content="LEVEL 100"/>
+                        <ComboBoxItem Content="LEVEL 200"/>
+                        <ComboBoxItem Content="LEVEL 300"/>
+                        <ComboBoxItem Content="LEVEL 400"/>
+
+                    </ComboBox>
+
+                </StackPanel>
+
+            </Border>
+
+            <!-- ========================= -->
+            <!-- ACTION BUTTONS -->
+            <!-- ========================= -->
+
+            <Button
+                Name="VerifyButton"
+                Content="VERIFY STUDENT"
+                Height="48"
+                FontWeight="Bold"
+                Click="OnVerifyClick"
+                Background="#0A4D8C"
+                Foreground="White"/>
+
+            <Button
+                Content="Admin Panel"
+                Height="40"
+                Click="OnAdminClick"
+                Background="Gray"
+                Foreground="White"/>
+                
+
+            <!-- ========================= -->
+            <!-- STATUS -->
+            <!-- ========================= -->
+
+            <Border BorderBrush="DarkGray"
+                    BorderThickness="1"
+                    CornerRadius="6"
+                    Padding="10">
+
+                <StackPanel>
+
+                    <TextBlock
+                        Text="Status"
+                        FontWeight="Bold"
+                        Margin="0,0,0,5"/>
+
+                    <TextBlock
+                        Name="StatusLabel"
+                        Text="Waiting for user..."
+                        TextWrapping="Wrap"
+                        HorizontalAlignment="Center"
+                        FontWeight="SemiBold"/>
+
+                </StackPanel>
+
+            </Border>
+
+        </StackPanel>
+
+    </ScrollViewer>
+
+</Window>

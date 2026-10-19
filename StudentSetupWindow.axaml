@@ -1,0 +1,68 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="s.StudentSetupWindow"
+        Title="Student Academic Setup"
+        Width="420"
+        Height="420">
+
+    <StackPanel Margin="30"
+                Spacing="18"
+                VerticalAlignment="Center">
+
+        <TextBlock Text="Student Academic Setup"
+                   FontSize="22"
+                   FontWeight="Bold"
+                   HorizontalAlignment="Center"/>
+
+        <TextBlock Text="Enter your academic information"
+                   HorizontalAlignment="Center"/>
+
+        <!-- Department -->
+        <ComboBox Name="DepartmentBox"
+                  HorizontalAlignment="Stretch"
+                  PlaceholderText="Select Department">
+            <ComboBoxItem Content="Computer Science"/>
+            <ComboBoxItem Content="Information Technology"/>
+            <ComboBoxItem Content="Information Systems"/>
+        </ComboBox>
+
+        <!-- Level -->
+        <ComboBox Name="LevelBox"
+                  HorizontalAlignment="Stretch"
+                  PlaceholderText="Select Level">
+            <ComboBoxItem Content="100"/>
+            <ComboBoxItem Content="200"/>
+            <ComboBoxItem Content="300"/>
+            <ComboBoxItem Content="400"/>
+        </ComboBox>
+
+        <!-- Programme -->
+        <ComboBox Name="ProgrammeBox"
+                  HorizontalAlignment="Stretch"
+                  PlaceholderText="Select Programme">
+            <ComboBoxItem Content="Diploma"/>
+            <ComboBoxItem Content="Bachelor"/>
+        </ComboBox>
+
+        <!-- Semester -->
+        <ComboBox Name="SemesterBox"
+                  HorizontalAlignment="Stretch"
+                  PlaceholderText="Select Semester">
+            <ComboBoxItem Content="First Semester"/>
+            <ComboBoxItem Content="Second Semester"/>
+        </ComboBox>
+
+        <!-- Continue Button -->
+        <Button Content="Continue"
+                HorizontalAlignment="Stretch"
+                HorizontalContentAlignment="Center"
+                Click="OnContinueClick"
+                Background="#0A4D8C"
+                Foreground="White"/>
+
+        <TextBlock Name="StatusLabel"
+                   HorizontalAlignment="Center"/>
+
+    </StackPanel>
+
+</Window>

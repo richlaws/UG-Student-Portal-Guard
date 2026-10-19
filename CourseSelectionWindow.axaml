@@ -1,0 +1,186 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="s.CourseSelectionWindow"
+        Title="Course Registration"
+        Width="560"
+        Height="680">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+
+        <StackPanel Margin="30"
+                    Spacing="15">
+
+            <!-- =========================
+                 HEADER
+                 ========================= -->
+
+            <TextBlock Text="COURSE REGISTRATION"
+                       FontSize="24"
+                       FontWeight="Bold"
+                       HorizontalAlignment="Center"/>
+
+            <TextBlock Text="Select your courses for registration."
+                       HorizontalAlignment="Center"
+                       TextWrapping="Wrap"/>
+
+            <TextBlock Text="Core courses are required. Elective courses must satisfy the registration rules."
+                       TextWrapping="Wrap"
+                       HorizontalAlignment="Center"
+                       Foreground="Gray"/>
+
+            <Separator/>
+
+            <!-- =========================
+                 NAVIGATION
+                 ========================= -->
+
+            <TextBlock Text="Registration Navigation"
+                       FontSize="17"
+                       FontWeight="Bold"/>
+
+            <StackPanel Orientation="Horizontal"
+                        Spacing="8">
+
+                <Button Content="Back"
+                        Click="OnBackClick"
+                        Background="Gray"
+                        Foreground="White"
+                        HorizontalAlignment="Stretch"/>
+
+                <Button Content="Retry"
+                        Click="OnRetryClick"
+                        Background="#0A4D8C"
+                        Foreground="White"
+                        HorizontalAlignment="Stretch"/>
+
+                <Button Content="My Registered Courses"
+                        Click="OnMyRegisteredCoursesClick"
+                        HorizontalAlignment="Stretch"/>
+
+            </StackPanel>
+
+            <Separator/>
+
+            <!-- =========================
+                 STUDENT INFORMATION
+                 ========================= -->
+
+            <Border BorderBrush="LightGray"
+                    BorderThickness="1"
+                    CornerRadius="6"
+                    Padding="10">
+
+                <StackPanel Spacing="4">
+
+                    <TextBlock Text="Student Registration Information"
+                               FontWeight="Bold"/>
+
+                    <TextBlock Name="StudentInfoLabel"
+                               TextWrapping="Wrap"/>
+
+                </StackPanel>
+
+            </Border>
+
+            <!-- =========================
+                 CORE COURSES
+                 ========================= -->
+
+            <TextBlock Text="Required Core Courses"
+                       FontWeight="Bold"
+                       FontSize="17"/>
+
+            <Border BorderBrush="Gray"
+                    BorderThickness="1"
+                    CornerRadius="6"
+                    Padding="10">
+
+                <StackPanel Name="CoreCoursesPanel"
+                            Spacing="8"/>
+
+            </Border>
+
+            <!-- =========================
+                 ELECTIVE COURSES
+                 ========================= -->
+
+            <TextBlock Text="Elective Courses"
+                       FontWeight="Bold"
+                       FontSize="17"
+                       Margin="0,5,0,0"/>
+
+            <Border BorderBrush="Gray"
+                    BorderThickness="1"
+                    CornerRadius="6"
+                    Padding="10">
+
+                <StackPanel Name="ElectiveCoursesPanel"
+                            Spacing="8"/>
+
+            </Border>
+
+            <!-- =========================
+                 CREDIT SUMMARY
+                 ========================= -->
+
+            <Border BorderBrush="Gray"
+                    BorderThickness="1"
+                    CornerRadius="6"
+                    Padding="10">
+
+                <TextBlock Name="CreditCounter"
+                           FontWeight="Bold"
+                           HorizontalAlignment="Center"
+                           TextWrapping="Wrap"/>
+
+            </Border>
+
+            <!-- =========================
+                 REGISTER
+                 ========================= -->
+
+            <Button Name="RegisterButton"
+                    Height="48"
+                    Content="REGISTER COURSES"
+                    ToolTip.Tip="Register the selected courses"
+                    HorizontalAlignment="Stretch"
+                    Click="OnRegisterClick"
+                    Background="#0A4D8C"
+                    Foreground="White"
+                    IsEnabled="False"/>
+
+            <TextBlock Text="Please review your selected courses carefully before continuing."
+                       FontStyle="Italic"
+                       Foreground="Gray"
+                       TextWrapping="Wrap"
+                       HorizontalAlignment="Center"/>
+
+            <!-- =========================
+                 STATUS
+                 ========================= -->
+
+            <Border BorderBrush="Gray"
+                    BorderThickness="1"
+                    CornerRadius="6"
+                    Padding="12">
+
+                <StackPanel Spacing="6">
+
+                    <TextBlock Text="Registration Status"
+                               FontWeight="Bold"
+                               HorizontalAlignment="Center"/>
+
+                    <TextBlock Name="StatusLabel"
+                               Text="Select your courses to begin."
+                               HorizontalAlignment="Center"
+                               TextWrapping="Wrap"/>
+
+                </StackPanel>
+
+            </Border>
+
+        </StackPanel>
+
+    </ScrollViewer>
+
+</Window>

@@ -1,0 +1,136 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="s.RegistrationSummaryWindow"
+        Width="700"
+        Height="700"
+        Title="Registration Summary">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+
+        <StackPanel Margin="25"
+                    Spacing="15">
+
+            <!-- =========================
+                 HEADER
+                 ========================= -->
+
+            <TextBlock Text="REGISTRATION SUMMARY"
+                       FontSize="26"
+                       FontWeight="Bold"
+                       HorizontalAlignment="Center"/>
+
+            <TextBlock Text="Review your registration details and selected courses before submitting."
+                       HorizontalAlignment="Center"
+                       TextWrapping="Wrap"/>
+
+            <Separator/>
+
+            <!-- =========================
+                 REGISTRATION DETAILS
+                 ========================= -->
+
+            <TextBlock Text="Registration Details"
+                       FontSize="18"
+                       FontWeight="Bold"/>
+
+            <Border BorderBrush="Gray"
+                    BorderThickness="1"
+                    CornerRadius="6"
+                    Padding="15">
+
+                <StackPanel Spacing="9">
+
+                    <TextBlock Name="StudentLabel"
+                               TextWrapping="Wrap"/>
+
+                    <TextBlock Name="DepartmentLabel"
+                               TextWrapping="Wrap"/>
+
+                    <TextBlock Name="LevelLabel"
+                               TextWrapping="Wrap"/>
+
+                    <TextBlock Name="SemesterLabel"
+                               TextWrapping="Wrap"/>
+
+                    <Separator/>
+
+                    <TextBlock Name="CreditLabel"
+                               FontWeight="Bold"
+                               TextWrapping="Wrap"/>
+
+                </StackPanel>
+
+            </Border>
+
+            <!-- =========================
+                 SELECTED COURSES
+                 ========================= -->
+
+            <TextBlock Text="Selected Courses"
+                       FontSize="18"
+                       FontWeight="Bold"
+                       Margin="0,5,0,0"/>
+
+            <Border BorderBrush="Gray"
+                    BorderThickness="1"
+                    CornerRadius="6"
+                    Padding="10">
+
+                <ListBox Name="CourseList"
+                         Height="320"/>
+
+            </Border>
+
+            <TextBlock Text="Please ensure that the courses and total credits shown above are correct before proceeding."
+                       FontStyle="Italic"
+                       Foreground="Gray"
+                       TextWrapping="Wrap"
+                       HorizontalAlignment="Center"/>
+
+            <!-- =========================
+                 STATUS
+                 ========================= -->
+
+            <Border BorderBrush="Gray"
+                    BorderThickness="1"
+                    CornerRadius="6"
+                    Padding="12">
+
+                <StackPanel Spacing="6">
+
+                    <TextBlock Text="Registration Status"
+                               FontSize="17"
+                               FontWeight="Bold"
+                               HorizontalAlignment="Center"/>
+
+                    <TextBlock Name="StatusLabel"
+                               HorizontalAlignment="Center"
+                               TextWrapping="Wrap"/>
+
+                </StackPanel>
+
+            </Border>
+
+            <!-- =========================
+                 ACTIONS
+                 ========================= -->
+
+            <Button Name="ConfirmButton"
+                    Content="CONFIRM REGISTRATION"
+                    Height="48"
+                    HorizontalAlignment="Stretch"
+                    Background="#0A4D8C"
+                    Foreground="White"/>
+
+            <Button Name="CancelButton"
+                    Content="CANCEL"
+                    Height="40"
+                    HorizontalAlignment="Stretch"
+                    Background="Gray"
+                    Foreground="White"/>
+
+        </StackPanel>
+
+    </ScrollViewer>
+
+</Window>

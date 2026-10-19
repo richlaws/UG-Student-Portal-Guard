@@ -1,0 +1,158 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="s.AdminWindow"
+        Title="Admin - Manage Courses"
+        Width="650"
+        Height="700">
+
+    <ScrollViewer
+         VerticalScrollBarVisibility="Auto"
+         HorizontalScrollBarVisibility="Disabled">
+
+    <StackPanel Margin="25"
+                Spacing="12">
+
+        <TextBlock Text="Add Course"
+                   FontSize="20"
+                   FontWeight="Bold"
+                   HorizontalAlignment="Center"/>
+
+        <ComboBox Name="DepartmentBox" PlaceholderText="Department">
+            <ComboBoxItem Content="Computer Science"/>
+            <ComboBoxItem Content="Information Technology"/>
+            <ComboBoxItem Content="Information Systems"/>
+        </ComboBox>
+
+        <ComboBox Name="LevelBox" PlaceholderText="Level">
+            <ComboBoxItem Content="100"/>
+            <ComboBoxItem Content="200"/>
+            <ComboBoxItem Content="300"/>
+            <ComboBoxItem Content="400"/>
+        </ComboBox>
+
+        <ComboBox Name="SemesterBox" PlaceholderText="Semester">
+            <ComboBoxItem Content="1"/>
+            <ComboBoxItem Content="2"/>
+        </ComboBox>
+
+        <TextBox Name="CourseCodeBox"
+            Watermark="Course Code (e.g. DCIT409)"
+            IsReadOnly="True"
+            Background="#EEEEEE"/>
+        
+        <TextBox Name="CourseNameBox" Watermark="Course Name"/>
+        <TextBox Name="CreditsBox" Watermark="Credits"/>
+
+        <CheckBox Name="IsCoreBox" Content="Core Course"/>
+
+        <Button Content="Add Course"
+                Click="OnAddCourseClick"
+                Background="#0A4D8C"
+                Foreground="White"/>
+
+        <TextBlock Name="StatusLabel"
+                HorizontalAlignment="Center"/>
+                   
+        <Separator Margin="0,10"/>
+
+        <TextBlock Text="Courses in Database"
+                FontWeight="Bold"
+                FontSize="16"/>
+
+        <TextBox Name="SearchBox"
+                Watermark="Search by code or title..."
+                Margin="0,5"
+                TextChanged="OnSearchChanged"/>
+
+        <Button Content="Refresh"
+                Click="OnRefreshClick"/>
+
+        <ListBox Name="CoursesListBox"
+                Height="170"
+                SelectionChanged="OnCourseSelected"/>
+
+        <StackPanel Orientation="Horizontal"
+                Spacing="10"
+                HorizontalAlignment="Center">
+
+            <Button Name="EditButton"
+                    Content="✏ Edit"
+                    IsEnabled="False"
+                    Click="OnEditClick"/>
+
+            <Button Name="DeleteButton"
+                    Content="Delete"
+                    IsEnabled="False"
+                    Click="OnDeleteClick"/>
+
+        </StackPanel>
+        
+        <Separator Margin="0,20"/>
+                    
+                    <TextBlock Text="Registration Rules"
+                         FontSize="18"
+                         FontWeight="Bold"/>
+                         
+                    <ComboBox Name="RuleDepartmentBox"
+                         PlaceholderText="Department"
+                         SelectionChanged="OnRuleSelectionChanged">
+
+                         <ComboBoxItem Content="Computer Science"/>
+                         <ComboBoxItem Content="Information Technology"/>
+                         <ComboBoxItem Content="Information Systems"/>
+
+                    </ComboBox>
+
+                    <ComboBox Name="RuleLevelBox"
+                        PlaceholderText="Level"
+                        SelectionChanged="OnRuleSelectionChanged">
+
+                        <ComboBoxItem Content="100"/>
+                        <ComboBoxItem Content="200"/>
+                        <ComboBoxItem Content="300"/>
+                        <ComboBoxItem Content="400"/>
+
+                    </ComboBox>
+
+                    <ComboBox Name="RuleSemesterBox"
+                        PlaceholderText="Semester"
+                        SelectionChanged="OnRuleSelectionChanged">
+
+                        <ComboBoxItem Content="1"/>
+                        <ComboBoxItem Content="2"/>
+
+                    </ComboBox>
+
+                    <CheckBox
+                         Name="RequireAllCoreBox"
+                         Content="Require all Core Courses"
+                         IsChecked="True"
+                         Checked="OnRequireAllCoreChanged"
+                         Unchecked="OnRequireAllCoreChanged"/>
+                         
+                    <TextBox
+                         Name="RequiredCoreBox"
+                         Watermark="Required Core Courses"
+                         IsEnabled="False"/>
+
+                    <TextBox
+                         Name="RequiredElectivesBox"
+                         Watermark="Required Electives"/>
+
+                    <TextBox
+                         Name="MinCreditsBox"
+                         Watermark="Minimum Credits"/>
+
+                    <TextBox
+                         Name="MaxCreditsBox"
+                         Watermark="Maximum Credits"/>
+                         
+                    <Button Name="SaveRuleButton"
+                         Content="Save Rule"
+                         Click="OnSaveRuleClick"/>
+
+        </StackPanel>
+
+</ScrollViewer>
+
+</Window>
